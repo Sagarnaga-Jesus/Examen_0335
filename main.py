@@ -2,8 +2,6 @@ import flet as ft
 
 def main(page: ft.Page):
     
-    
-    
     page.add(ft.Text("Registro de Participantes",size=30))
     nombre=page.add(ft.TextField(label="Nombre Completo"))
     correo=page.add(ft.TextField(label="Correo Electronico"))
@@ -27,15 +25,10 @@ def main(page: ft.Page):
     requiere=page.add(ft.Checkbox(label="Requiere computadora portátil"))
     
     nivel=page.add(ft.Slider(label="{value}", value=1, max=5, min=1, divisions=5, width=400))
-    
-    page.add(ft.ElevatedButton(
-    Text="holaaas"
-    ))
-
 
     
     def resume():
-        page.add(ft.Text(f"Nombre: {nombre}\n Email:{correo}\n Taller{taller} \n Pago{pago}\n Requiere Portatil: {requiere}\n Nivel:{nivel}\n --- Gracias por su registro ---"))    
+        page.add(ft.Text(f"--- FICHA DEL PARTICIPANTE ---\n Nombre: {nombre}\n Email:{correo}\n Taller{taller} \n Pago{pago}\n Requiere Portatil: {requiere}\n Nivel:{nivel}\n --- Gracias por su registro ---"))    
     
     
 ft.run(main) 
